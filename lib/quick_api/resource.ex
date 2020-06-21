@@ -26,10 +26,32 @@ defmodule QuickApi.Resource do
   defmodule QuickApi.NewResource do
     use QuickApi.Resource, client: ApiClient, endpoint: "new_resources", exclude: [:delete_all, :delete]
   end
+
+  {:ok, [%{}]} = QuickApi.NewResource.list()
+  {:ok, %{}} = QuickApi.NewResource.get("id")
   ```
 
   This definition will not create a `delete_all/0` or `delete/1` endpoint for the
   new resource you have defined.
+
+  ### Options
+  Currently this module supports four options `:client`, `:endpoint`, `:exclude`, and `:opts`.
+
+  `:client` is the HTTP client, that implements, the methods `get/3`, `post/3`, `patch/3`, `put/3`, and
+  `delete/2` methods. You can use the `QuickApi.Client` to define your own client that implements these
+  methods with the necessary methods.
+
+  `:endpoint` is the base path for the RESTful CRUD operations. If the api_host is set to `https://example.com`
+  then you can set the `:endpoint` to `"orders"` and it will automatically resolve the resource base url to
+  `https://example.com/orders`.
+
+  `:exclude` is the list of CRUD operations to exclude from your resource definition. This can be used
+  when an endpoint does not define all CRUD operations and you want to exclude functions from being defined
+  on the resource.
+
+  `:opts` is the last option you can pass in and this a keyword list of additional options. This can be used
+  to pass in more options to your client when calling the HTTP methods. Such as any additional headers you want
+  to pass along or a special api_host url.
   """
   defmacro __using__(options) do
     client = Keyword.fetch!(options, :client)
