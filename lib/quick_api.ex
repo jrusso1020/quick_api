@@ -1,18 +1,5 @@
 defmodule QuickApi do
   @moduledoc """
-  Documentation for `QuickApi`.
+  A library for quickly creating Elixir API wrappers, especially for RESTful CRUD API's
   """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> QuickApi.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
 end

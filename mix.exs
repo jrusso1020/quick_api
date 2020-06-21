@@ -34,9 +34,9 @@ defmodule QuickApi.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:bypass, "~> 1.0", only: :test},
       {:credo, "~> 1.4", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.10", only: :test},
-      {:exvcr, "~> 0.11", only: :test},
       {:hackney, "~> 1.15.2"},
       {:ex_doc, "~> 0.22", only: :dev, runtime: false},
       {:jason, "~> 1.2"},
