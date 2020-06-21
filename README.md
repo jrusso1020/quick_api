@@ -1,4 +1,4 @@
-# QuickApi
+# QuickApi [![Coverage Status](https://coveralls.io/repos/github/jrusso1020/quick_api/badge.svg?branch=master)](https://coveralls.io/github/jrusso1020/quick_api?branch=master) [![jrusso1020](https://circleci.com/gh/jrusso1020/quick_api.svg?style=svg)](https://circleci.com/gh/jrusso1020/quick_api)
 An Elixir library for quickly creating Elixir API wrappers for RESTful CRUD API's
 
 ## Installation
