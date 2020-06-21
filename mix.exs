@@ -14,11 +14,11 @@ defmodule QuickApi.MixProject do
       deps: deps(),
 
       # Docs
-      name: "Quick Api",
+      name: "QuickApi",
       source_url: "https://github.com/jrusso1020/quick_api",
       homepage_url: "https://github.com/jrusso1020/quick_api",
       docs: [
-        main: "Quick Api",
+        main: "QuickApi",
         extra: ["README.md"]
       ]
     ]
